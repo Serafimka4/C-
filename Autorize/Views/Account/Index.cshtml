@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="~/Content/Style.css">
+</head>
+<body>
+
+    <h1>Добро пожаловть</h1>
+
+    <div class="link">
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("logout...", "Logoff")
+        }
+
+        else
+        {
+            <button type="submit" class="btn">@Html.ActionLink("Войти", "Login")</button>
+            <button type="submit" class="btn">@Html.ActionLink("Зарегестрироваться", "Register")</button>
+        }
+
+    </div>
+
+    <footer></footer>
+</body>
+</html>
