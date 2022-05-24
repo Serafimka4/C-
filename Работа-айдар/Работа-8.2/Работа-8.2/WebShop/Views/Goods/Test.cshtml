@@ -1,0 +1,32 @@
+﻿
+
+@{ 
+    System.Diagnostics.Debug.WriteLine(((List<WebShop.Models.Ok>)Session["basket"])[0].OkId);}
+
+
+
+<<table class="table">
+
+
+    @foreach (var item in (List<WebShop.Models.Ok>)Session["basket"])
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OkId)
+            </td>
+        </tr>
+    }
+
+</table>

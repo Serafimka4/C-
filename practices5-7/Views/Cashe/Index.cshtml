@@ -1,0 +1,37 @@
+﻿@model IEnumerable<practices5_7.Models.PeopleModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<H1>@ViewBag.Text</H1>
+@using (Html.BeginForm("Index", "Cashe", method: FormMethod.Get))
+{
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Awards)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Awards)
+                </td>
+
+            </tr>
+        }
+
+
+
+    </table>
+    <input type="submit" value="Данные из кеша" class="btn btn-default" />
+}

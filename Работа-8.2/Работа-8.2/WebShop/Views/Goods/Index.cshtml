@@ -1,0 +1,94 @@
+﻿@model IEnumerable<WebShop.Models.Good>
+
+@{
+    if (Session["basket"] == null) { Session["basket"] = new List<WebShop.Models.Good> { }; }
+    ViewBag.basket = new List<WebShop.Models.Good> { };
+    ViewBag.Title = "Index";
+}
+
+<!--        CSS            -->
+<link rel="stylesheet" href="~/Content/StyleSheet1.css" />
+
+
+<!--        JS             -->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.js">
+</script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.8.1/jquery.validate.js">
+</script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js">
+</script>
+
+
+<!--        Buttons            -->
+<div class="flex_buttons">
+    <div class="line my_butt">@Html.ActionLink("Корзина", "../Customers/Basket", null, new { @class = "my_button" })</div>
+    <div class="my_butt line">@Html.ActionLink("Войти как администратор", "Authorize", null, new { @class = "my_button" })</div>
+</div>
+
+
+<!--        Table            -->
+<table class="table" margin="30px 0px">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <!--<th class="amount__td"></th>-->
+        <th></th>
+    </tr>
+    @{
+        List<int> ids = new List<int> { };
+    }
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description, new { @class = "descr" })
+            </td>
+            <!--<td class="amount__td"><input type="text" class="amount" /></td>-->
+            <td>
+                @{  if(item.Amount > 0) { 
+                <div>
+                    @using (Html.BeginForm("Test1", "Goods", FormMethod.Post))
+                    {
+                        <div class="bask_flex">
+                            @Html.TextBox("amount", "", new { @class = "textbox", @type = "number" })
+                            @Html.Hidden("id", (int)item.GoodID)
+                            <input type="submit" value="Добавить в карзину" class="button_submit btn-success btn" />
+                        </div>
+
+                    }
+
+                </div>
+                    }
+                }
+                <!--Html.ActionLink("Добавить в корзину", "Test1", new { id = item.GoodID })-->
+            </td>
+        </tr>
+    }
+
+
+</table>
+
+
+
+

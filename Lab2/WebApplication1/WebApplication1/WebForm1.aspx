@@ -18,12 +18,13 @@
             <br />
             Подтвердите пароль<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
             <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox2" ControlToValidate="TextBox3" ErrorMessage="Ошибка подтверждения пароля">Не верно введен пароль</asp:CompareValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Ошибка подтверждения пароля">Обязательное поле ввода</asp:RequiredFieldValidator>
             <br />
             email<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox4" ErrorMessage="Ошибка ввода email" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">Не правильно введен email</asp:RegularExpressionValidator>
             <br />
             Возраст<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox5" ErrorMessage="Ошибка ввода возраста" MaximumValue="65" MinimumValue="18">Не верно введен возраст</asp:RangeValidator>
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox5" ErrorMessage="Ошибка ввода возраста" MaximumValue="65" MinimumValue="18">Ваш возраст не подходит</asp:RangeValidator>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Отправить" />

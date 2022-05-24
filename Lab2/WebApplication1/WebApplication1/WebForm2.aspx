@@ -11,6 +11,7 @@
     <form id="form1" runat="server">
         <div>
             Login<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Ошибка ввода имени">Обязательное поле ввода</asp:RequiredFieldValidator>
             <br />
             Password<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
             <br />

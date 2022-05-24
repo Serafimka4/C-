@@ -1,0 +1,30 @@
+﻿@model IEnumerable<practices5_7.Models.Party>
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display</h2>
+
+@foreach (var item in Model)
+{
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Number)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Text)
+        <br>
+    </td>
+
+</tr>
+}
+
+<div>
+    @Html.ActionLink("Обратно к форме", "Form")
+</div>

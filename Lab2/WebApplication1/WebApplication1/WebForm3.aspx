@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <p>Добро пожаловть!</p>
             <asp:Label ID="Label1" runat="server"></asp:Label>
             <br />
             <asp:Label ID="Label2" runat="server"></asp:Label>

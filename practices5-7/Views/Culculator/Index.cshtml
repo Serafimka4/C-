@@ -1,0 +1,28 @@
+﻿@model practices5_7.Models.Culculator
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div align="center">
+    <h2>Simple Calculator</h2> @using (Html.BeginForm())
+    {
+        <table>
+            <tr>
+                <th> First Number </th>
+                <td> <input type="text"  name="X" class="form-control" /> </td>
+            </tr>
+            <tr>
+                <th> Last Number </th>
+                <td> <input type="text"  name="Y" class="form-control" /> </td>
+            </tr>
+            <tr>
+                <th><input type="submit" name="Op" value="Plus" class="btn btn-primary" /> <input type="submit" name="Op" value="Minus" class="btn btn-primary" /> </th>
+                <th> <input type="submit" name="Op" value="Multiply" class="btn btn-primary" /> <input type="submit" name="Op" value="Division" class="btn btn-primary" /> </th>
+            </tr>
+            <tr>
+                <th>Result</th>
+                <td>@ViewBag.Result</td>
+            </tr>
+        </table>   
+        }
+

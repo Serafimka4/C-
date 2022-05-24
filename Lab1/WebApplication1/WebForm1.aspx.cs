@@ -19,15 +19,15 @@ namespace WebApplication1
             Dictionary<string, string> list = new Dictionary<string, string>();
             list.Add("aidar", "123");
 
-            if (list.ContainsKey(TextBox1.Text))
+            if (list.ContainsKey(TextBox1.Text.ToLower()))
             {
-                if (list[TextBox1.Text] == TextBox2.Text)
+                if (list[TextBox1.Text.ToLower()] == TextBox2.Text)
                 {
                     Response.Redirect("WebForm2.aspx");
                 }
-                else Label1.Text = "Неверный пороль";
+                else Label1.Text = "Неверный пароль";
             }
-            else Label1.Text = "Неверный логин";
+
         }
     }
 }

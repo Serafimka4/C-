@@ -14,14 +14,12 @@ namespace Autorize.Controllers
     {
         private UserContext db = new UserContext();
 
-        // GET: Users
         public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
 
-        // GET: Users/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(int ? id)
         {
             if (id == null)
             {
@@ -35,15 +33,12 @@ namespace Autorize.Controllers
             return View(user);
         }
 
-        // GET: Users/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Users/Create
-        // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
-        // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Email,Password,Age")] User user)
@@ -58,7 +53,6 @@ namespace Autorize.Controllers
             return View(user);
         }
 
-        // GET: Users/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,9 +67,7 @@ namespace Autorize.Controllers
             return View(user);
         }
 
-        // POST: Users/Edit/5
-        // Чтобы защититься от атак чрезмерной передачи данных, включите определенные свойства, для которых следует установить привязку. Дополнительные 
-        // сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=317598.
+      
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Email,Password,Age")] User user)
@@ -89,7 +81,6 @@ namespace Autorize.Controllers
             return View(user);
         }
 
-        // GET: Users/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +95,6 @@ namespace Autorize.Controllers
             return View(user);
         }
 
-        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

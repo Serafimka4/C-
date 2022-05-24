@@ -18,7 +18,7 @@ namespace WebApplication1
         /// form1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
@@ -27,7 +27,7 @@ namespace WebApplication1
         /// TextBox1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
@@ -36,7 +36,7 @@ namespace WebApplication1
         /// RequiredFieldValidator1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
@@ -45,7 +45,7 @@ namespace WebApplication1
         /// TextBox2 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
@@ -54,7 +54,7 @@ namespace WebApplication1
         /// RegularExpressionValidator1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
@@ -63,7 +63,7 @@ namespace WebApplication1
         /// TextBox3 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
@@ -72,16 +72,25 @@ namespace WebApplication1
         /// CompareValidator1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
 
         /// <summary>
+        /// RequiredFieldValidator3 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+
+        /// <summary>
         /// TextBox4 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
@@ -90,7 +99,7 @@ namespace WebApplication1
         /// RegularExpressionValidator2 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
@@ -99,7 +108,7 @@ namespace WebApplication1
         /// TextBox5 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
@@ -108,7 +117,7 @@ namespace WebApplication1
         /// RangeValidator1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
@@ -117,7 +126,7 @@ namespace WebApplication1
         /// Button1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
@@ -126,7 +135,7 @@ namespace WebApplication1
         /// ValidationSummary1 элемент управления.
         /// </summary>
         /// <remarks>
-        /// Автоматически создаваемое поле.
+        /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;

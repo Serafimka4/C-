@@ -1,0 +1,61 @@
+﻿@model WebShop.Models.Good
+
+
+@{ 
+    ViewBag.Title = "List";
+}
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+
+    <div>
+        @{
+            int a = Model.Amount;
+        }
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <!-- атрибут name такой же как в контроллере у метода параметр -->
+                @Html.TextBox("amount")
+                @Html.ViewContext = a
+                <button class="btn btn-info" type="submit">Добавить</button>
+            </div>
+         }
+
+    </div>
+</div>
